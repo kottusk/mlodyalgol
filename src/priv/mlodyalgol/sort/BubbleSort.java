@@ -3,7 +3,7 @@ package priv.mlodyalgol.sort;
 import java.util.Arrays;
 import java.util.Random;
 
-public class BubbleSort {
+public class BubbleSort extends AbstractSort{
 
     public static void main(String[] args) {
         int[] table = new int[20];
@@ -27,17 +27,4 @@ public class BubbleSort {
         System.out.println("Sorted =" + Arrays.toString(inputTable));
     }
 
-    private static  void switchElements(int[] inputTable, int j) {
-            int temp = inputTable[j];
-            inputTable[j] = inputTable[j+1];
-            inputTable[j+1] = temp;
-
-    }
-
-    private static void seedTable(int[] seededTable){
-        Random random = new Random();
-        for(int i=0;i < seededTable.length;i++){
-            seededTable[i] = random.nextInt(seededTable.length);
-        }
-    }
 }
